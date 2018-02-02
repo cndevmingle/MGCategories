@@ -1,0 +1,22 @@
+PODS:
+  - MGCategories (0.1.0):
+    - MGCategories/MGCache (= 0.1.0)
+    - MGCategories/MGDate (= 0.1.0)
+    - MGCategories/MGView (= 0.1.0)
+  - MGCategories/MGCache (0.1.0)
+  - MGCategories/MGDate (0.1.0)
+  - MGCategories/MGView (0.1.0)
+
+DEPENDENCIES:
+  - MGCategories (from `../`)
+
+EXTERNAL SOURCES:
+  MGCategories:
+    :path: ../
+
+SPEC CHECKSUMS:
+  MGCategories: bf6795a6fb617f8875d8ef0a343493f660687d3d
+
+PODFILE CHECKSUM: 2cc36ef2ff400fe15a1ec0ad56448c5d2a86da60
+
+COCOAPODS: 1.4.0

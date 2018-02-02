@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'MGCategories_Example' do
+  pod 'MGCategories', :path => '../'
+
+  target 'MGCategories_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
