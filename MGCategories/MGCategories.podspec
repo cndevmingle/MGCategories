@@ -31,12 +31,12 @@ TODO: 不定期添加一些常用Category，方便开发。
   s.ios.deployment_target = '8.0'
 
   s.subspec 'MGDate' do |ss|
-  	ss.source_files = 'MGCategories/Classes/MGDate/**/*.{h,m}'
+  	ss.source_files = 'MGCategories/MGCategories/Classes/MGDate/**/*.{h,m}'
   	ss.frameworks = 'Foundation'
   end
 
   s.subspec 'MGView' do |ss|
-  	ss.source_files = 'MGCategories/Classes/MGView/**/*.{h,m}'
+  	ss.source_files = 'MGCategories/MGCategories/Classes/MGView/**/*.{h,m}'
   	ss.frameworks = 'UIKit'
   end
 

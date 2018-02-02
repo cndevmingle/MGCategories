@@ -10,7 +10,6 @@
 #endif
 #endif
 
-#import "NSObject+MGCache.h"
 #import "NSDate+MGDate.h"
 #import "UIView+MGView.h"
 

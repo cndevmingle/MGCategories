@@ -1,9 +1,9 @@
 {
   "name": "MGCategories",
-  "version": "0.1.0",
-  "summary": "A short description of MGCategories.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Mingle/MGCategories",
+  "version": "0.0.1",
+  "summary": "常用类的Category.",
+  "description": "TODO: 不定期添加一些常用Category，方便开发。",
+  "homepage": "https://github.com/cndevmingle/MGCategories",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,8 +12,8 @@
     "Mingle": "cndevmingle@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Mingle/MGCategories.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/cndevmingle/MGCategories.git",
+    "tag": "0.0.1"
   },
   "platforms": {
     "ios": "8.0"
@@ -21,15 +21,13 @@
   "subspecs": [
     {
       "name": "MGDate",
-      "source_files": "MGCategories/Classes/MGDate/**/*.{h,m}"
+      "source_files": "MGCategories/Classes/MGDate/**/*.{h,m}",
+      "frameworks": "Foundation"
     },
     {
       "name": "MGView",
-      "source_files": "MGCategories/Classes/MGView/**/*.{h,m}"
-    },
-    {
-      "name": "MGCache",
-      "source_files": "MGCategories/Classes/MGCache/**/*.{h,m}"
+      "source_files": "MGCategories/Classes/MGView/**/*.{h,m}",
+      "frameworks": "UIKit"
     }
   ]
 }
