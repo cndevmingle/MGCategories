@@ -32,15 +32,17 @@ TODO: Add long description of the pod here.
 
   s.subspec 'MGDate' do |ss|
   	ss.source_files = 'MGCategories/Classes/MGDate/**/*.{h,m}'
+  	ss.frameworks = 'Foundation'
   end
 
   s.subspec 'MGView' do |ss|
   	ss.source_files = 'MGCategories/Classes/MGView/**/*.{h,m}'
+  	ss.frameworks = 'UIKit'
   end
 
-  s.subspec 'MGCache' do |ss|
-  	ss.source_files = 'MGCategories/Classes/MGCache/**/*.{h,m}'
-  end
+  # s.subspec 'MGCache' do |ss|
+  # 	ss.source_files = 'MGCategories/Classes/MGCache/**/*.{h,m}'
+  # end
   
   # s.resource_bundles = {
   #   'MGCategories' => ['MGCategories/Assets/*.png']
