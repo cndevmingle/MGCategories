@@ -43,12 +43,33 @@
 /**
  设置任意角的弧度
 
- @param topleft
- @param topRight
- @param bottomLeft
- @param bottomRight
+ @param topleft 是否需要左上圆角
+ @param topRight 是否需要右上圆角
+ @param bottomLeft 是否需要左下圆角
+ @param bottomRight 是否需要右下圆角
  @param size 圆角大小
  */
 - (void)mg_setCornerRadiusWithTopLeft:(BOOL)topleft topRight:(BOOL)topRight bottomLeft:(BOOL)bottomLeft bottomRight:(BOOL)bottomRight size:(CGSize)size;
+
+/**
+ 点击一次的手势响应
+
+ @param block 回调
+ */
+- (void)mg_whenTapOnceWithBlock:(void(^)(UIView *view))block;
+
+/**
+ 点击两次的手势响应
+
+ @param block 回调
+ */
+- (void)mg_whenTapDoubleWithBlock:(void(^)(UIView *view))block;
+
+/**
+ 长按时菜单功能
+
+ @param block 回调
+ */
+- (void)mg_whenLongPressWithBlock:(void(^)(UIView *view))block;
 
 @end

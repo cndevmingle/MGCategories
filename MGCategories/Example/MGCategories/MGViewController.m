@@ -19,6 +19,22 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+}
+
+- (void)gestureTestCase {
+    UIView *aView = [[UIView alloc] initWithFrame:CGRectMake(0, 100, 300, 300)];
+    aView.backgroundColor = [UIColor redColor];
+    [aView mg_whenTapOnceWithBlock:^(UIView *view) {
+        NSLog(@"mg_whenTapOnceWithBlock");
+    }];
+    [aView mg_whenTapDoubleWithBlock:^(UIView *view) {
+        NSLog(@"mg_whenTapDoubleWithBlock");
+    }];
+    [aView mg_whenLongPressWithBlock:^(UIView *view) {
+        NSLog(@"mg_whenLongPressWithBlock");
+    }];
+    [self.view addSubview:aView];
 }
 
 - (void)didReceiveMemoryWarning

@@ -6,6 +6,24 @@
 //
 
 #import "UIView+MGView.h"
+#import <objc/runtime.h>
+
+@interface UIView ()
+
+/**单击手势*/
+@property (nonatomic, strong) UITapGestureRecognizer *onceTapGesture;
+/**双击手势*/
+@property (nonatomic, strong) UITapGestureRecognizer *doubleTapGesture;
+/**长按手势*/
+@property (nonatomic, strong) UILongPressGestureRecognizer *longPressGesture;
+/**单击手势回调*/
+@property (nonatomic, copy) void(^tapBlock)(UIView *);
+/**双击手势回调*/
+@property (nonatomic, copy) void(^doubleBlock)(UIView *);
+/**长按手势回调*/
+@property (nonatomic, copy) void(^longPressBlock)(UIView *);
+
+@end
 
 @implementation UIView (MGView)
 
@@ -164,6 +182,105 @@
     CAShapeLayer *maskLayer = [CAShapeLayer layer];
     maskLayer.path = path.CGPath;
     self.layer.mask = maskLayer;
+}
+
+- (void)mg_whenTapOnceWithBlock:(void (^)(UIView *))block {
+    if (!self.onceTapGesture) {
+        self.onceTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onceTapHandle)];
+        [self addGestureRecognizer:self.onceTapGesture];
+        if (self.doubleTapGesture) {
+            [self.onceTapGesture requireGestureRecognizerToFail:self.doubleTapGesture];
+        }
+    }
+    self.tapBlock = block;
+}
+
+- (void)onceTapHandle {
+    if (self.tapBlock) {
+        self.tapBlock(self);
+    }
+}
+
+- (void)mg_whenTapDoubleWithBlock:(void (^)(UIView *))block {
+    if (!self.doubleTapGesture) {
+        self.doubleTapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(doubleTapHandle)];
+        self.doubleTapGesture.numberOfTapsRequired = 2;
+        [self addGestureRecognizer:self.doubleTapGesture];
+        if (self.onceTapGesture) {
+            [self.onceTapGesture requireGestureRecognizerToFail:self.doubleTapGesture];
+        }
+    }
+    self.doubleBlock = block;
+}
+
+- (void)doubleTapHandle {
+    if (self.doubleBlock) {
+        self.doubleBlock(self);
+    }
+}
+
+- (void)mg_whenLongPressWithBlock:(void (^)(UIView *))block {
+    if (!self.longPressGesture) {
+        self.longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressHandle:)];
+        [self addGestureRecognizer:self.longPressGesture];
+    }
+    self.longPressBlock = block;
+}
+
+- (void)longPressHandle:(UILongPressGestureRecognizer *)sender {
+    if (sender.state == UIGestureRecognizerStateBegan) {
+        if (self.longPressBlock) {
+            self.longPressBlock(self);
+        }
+    }
+}
+
+- (void)setOnceTapGesture:(UITapGestureRecognizer *)onceTapGesture {
+    objc_setAssociatedObject(self, _cmd, onceTapGesture, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (UITapGestureRecognizer *)onceTapGesture {
+    return objc_getAssociatedObject(self, @selector(setOnceTapGesture:));
+}
+
+- (void)setTapBlock:(void (^)(UIView *))tapBlock {
+    objc_setAssociatedObject(self, _cmd, tapBlock, OBJC_ASSOCIATION_COPY);
+}
+
+- (void (^)(UIView *))tapBlock {
+    return objc_getAssociatedObject(self, @selector(setTapBlock:));
+}
+
+- (void)setDoubleTapGesture:(UITapGestureRecognizer *)doubleTapGesture {
+    objc_setAssociatedObject(self, _cmd, doubleTapGesture, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (UITapGestureRecognizer *)doubleTapGesture {
+    return objc_getAssociatedObject(self, @selector(setDoubleTapGesture:));
+}
+
+- (void)setDoubleBlock:(void (^)(UIView *))doubleBlock {
+    objc_setAssociatedObject(self, _cmd, doubleBlock, OBJC_ASSOCIATION_COPY);
+}
+
+- (void (^)(UIView *))doubleBlock {
+    return objc_getAssociatedObject(self, @selector(setDoubleBlock:));
+}
+
+- (void)setLongPressGesture:(UILongPressGestureRecognizer *)longPressGesture {
+    objc_setAssociatedObject(self, _cmd, longPressGesture, OBJC_ASSOCIATION_RETAIN);
+}
+
+- (UILongPressGestureRecognizer *)longPressGesture {
+    return objc_getAssociatedObject(self, @selector(setLongPressGesture:));
+}
+
+- (void)setLongPressBlock:(void (^)(id))longPressBlock {
+    objc_setAssociatedObject(self, _cmd, longPressBlock, OBJC_ASSOCIATION_COPY);
+}
+
+- (void (^)(id))longPressBlock {
+    return objc_getAssociatedObject(self, @selector(setLongPressBlock:));
 }
 
 @end
