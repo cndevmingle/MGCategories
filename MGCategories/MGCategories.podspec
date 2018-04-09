@@ -40,6 +40,10 @@ TODO: 不定期添加一些常用Category，方便开发。
   	ss.frameworks = 'UIKit'
   end
 
+  s.subspec 'MGString' do |ss|
+  	ss.source_files = 'MGCategories/MGCategories/Classes/MGString/**/*.{h,m}'
+  end
+
   # s.subspec 'MGCache' do |ss|
   # 	ss.source_files = 'MGCategories/Classes/MGCache/**/*.{h,m}'
   # end

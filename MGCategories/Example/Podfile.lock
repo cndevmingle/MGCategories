@@ -1,20 +1,22 @@
 PODS:
-  - MGCategories (0.0.1):
-    - MGCategories/MGDate (= 0.0.1)
-    - MGCategories/MGView (= 0.0.1)
-  - MGCategories/MGDate (0.0.1)
-  - MGCategories/MGView (0.0.1)
+  - MGCategories (0.0.2):
+    - MGCategories/MGDate (= 0.0.2)
+    - MGCategories/MGString (= 0.0.2)
+    - MGCategories/MGView (= 0.0.2)
+  - MGCategories/MGDate (0.0.2)
+  - MGCategories/MGString (0.0.2)
+  - MGCategories/MGView (0.0.2)
 
 DEPENDENCIES:
   - MGCategories (from `../`)
 
 EXTERNAL SOURCES:
   MGCategories:
-    :path: ../
+    :path: "../"
 
 SPEC CHECKSUMS:
-  MGCategories: 729f367144ed8c3ead1de3371c7d9741e37e8eeb
+  MGCategories: e1d0a0e707fa570eb2a46ddcfd4d0fb40ea0556c
 
 PODFILE CHECKSUM: 2cc36ef2ff400fe15a1ec0ad56448c5d2a86da60
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.0.beta.1
