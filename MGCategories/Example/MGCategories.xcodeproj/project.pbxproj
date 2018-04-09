@@ -23,12 +23,6 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		690FA308E6642A35343760E8 /* Pods_MGCategories_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A555FE962685C66DC8302FDF /* Pods_MGCategories_Tests.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
-		82F0B4FA207BB745002FA596 /* NSDate+MGDate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0B4EC207BB744002FA596 /* NSDate+MGDate.m */; };
-		82F0B4FB207BB745002FA596 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 82F0B4EE207BB744002FA596 /* .gitkeep */; };
-		82F0B4FC207BB745002FA596 /* NSString+MGString.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0B4F0207BB744002FA596 /* NSString+MGString.m */; };
-		82F0B4FD207BB745002FA596 /* NSObject+MGCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0B4F4207BB744002FA596 /* NSObject+MGCache.m */; };
-		82F0B4FE207BB745002FA596 /* UIView+MGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 82F0B4F7207BB744002FA596 /* UIView+MGView.m */; };
-		82F0B4FF207BB745002FA596 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = 82F0B4F9207BB744002FA596 /* .gitkeep */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -69,16 +63,6 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77925A073CCE193667F21809 /* Pods-MGCategories_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGCategories_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MGCategories_Example/Pods-MGCategories_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7BF408DB33AE73461FA55CA7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
-		82F0B4EC207BB744002FA596 /* NSDate+MGDate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+MGDate.m"; sourceTree = "<group>"; };
-		82F0B4ED207BB744002FA596 /* NSDate+MGDate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+MGDate.h"; sourceTree = "<group>"; };
-		82F0B4EE207BB744002FA596 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
-		82F0B4F0207BB744002FA596 /* NSString+MGString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MGString.m"; sourceTree = "<group>"; };
-		82F0B4F1207BB744002FA596 /* NSString+MGString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MGString.h"; sourceTree = "<group>"; };
-		82F0B4F3207BB744002FA596 /* NSObject+MGCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+MGCache.h"; sourceTree = "<group>"; };
-		82F0B4F4207BB744002FA596 /* NSObject+MGCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+MGCache.m"; sourceTree = "<group>"; };
-		82F0B4F6207BB744002FA596 /* UIView+MGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MGView.h"; sourceTree = "<group>"; };
-		82F0B4F7207BB744002FA596 /* UIView+MGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MGView.m"; sourceTree = "<group>"; };
-		82F0B4F9207BB744002FA596 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A555FE962685C66DC8302FDF /* Pods_MGCategories_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGCategories_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04A31507B89271C4C458DAD /* Pods-MGCategories_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGCategories_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MGCategories_Tests/Pods-MGCategories_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,7 +98,6 @@
 		6003F581195388D10070C39A = {
 			isa = PBXGroup;
 			children = (
-				82F0B4E9207BB744002FA596 /* MGCategories */,
 				60FF7A9C1954A5C5007DD14C /* Podspec Metadata */,
 				6003F593195388D20070C39A /* Example for MGCategories */,
 				6003F5B5195388D20070C39A /* Tests */,
@@ -202,72 +185,6 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		82F0B4E9207BB744002FA596 /* MGCategories */ = {
-			isa = PBXGroup;
-			children = (
-				82F0B4EA207BB744002FA596 /* Classes */,
-				82F0B4F8207BB744002FA596 /* Assets */,
-			);
-			name = MGCategories;
-			path = ../MGCategories;
-			sourceTree = "<group>";
-		};
-		82F0B4EA207BB744002FA596 /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				82F0B4EB207BB744002FA596 /* MGDate */,
-				82F0B4EE207BB744002FA596 /* .gitkeep */,
-				82F0B4EF207BB744002FA596 /* MGString */,
-				82F0B4F2207BB744002FA596 /* MGCache */,
-				82F0B4F5207BB744002FA596 /* MGView */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		82F0B4EB207BB744002FA596 /* MGDate */ = {
-			isa = PBXGroup;
-			children = (
-				82F0B4EC207BB744002FA596 /* NSDate+MGDate.m */,
-				82F0B4ED207BB744002FA596 /* NSDate+MGDate.h */,
-			);
-			path = MGDate;
-			sourceTree = "<group>";
-		};
-		82F0B4EF207BB744002FA596 /* MGString */ = {
-			isa = PBXGroup;
-			children = (
-				82F0B4F0207BB744002FA596 /* NSString+MGString.m */,
-				82F0B4F1207BB744002FA596 /* NSString+MGString.h */,
-			);
-			path = MGString;
-			sourceTree = "<group>";
-		};
-		82F0B4F2207BB744002FA596 /* MGCache */ = {
-			isa = PBXGroup;
-			children = (
-				82F0B4F3207BB744002FA596 /* NSObject+MGCache.h */,
-				82F0B4F4207BB744002FA596 /* NSObject+MGCache.m */,
-			);
-			path = MGCache;
-			sourceTree = "<group>";
-		};
-		82F0B4F5207BB744002FA596 /* MGView */ = {
-			isa = PBXGroup;
-			children = (
-				82F0B4F6207BB744002FA596 /* UIView+MGView.h */,
-				82F0B4F7207BB744002FA596 /* UIView+MGView.m */,
-			);
-			path = MGView;
-			sourceTree = "<group>";
-		};
-		82F0B4F8207BB744002FA596 /* Assets */ = {
-			isa = PBXGroup;
-			children = (
-				82F0B4F9207BB744002FA596 /* .gitkeep */,
-			);
-			path = Assets;
-			sourceTree = "<group>";
-		};
 		F4B8DEDFA272B607455270F5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -290,6 +207,7 @@
 				6003F586195388D20070C39A /* Sources */,
 				6003F587195388D20070C39A /* Frameworks */,
 				6003F588195388D20070C39A /* Resources */,
+				4721E02F6DF675A89400FE0A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -363,8 +281,6 @@
 			files = (
 				873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */,
 				71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */,
-				82F0B4FB207BB745002FA596 /* .gitkeep in Resources */,
-				82F0B4FF207BB745002FA596 /* .gitkeep in Resources */,
 				6003F5A9195388D20070C39A /* Images.xcassets in Resources */,
 				6003F598195388D20070C39A /* InfoPlist.strings in Resources */,
 			);
@@ -381,6 +297,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4721E02F6DF675A89400FE0A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MGCategories_Example/Pods-MGCategories_Example-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MGCategories/MGCategories.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MGCategories.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MGCategories_Example/Pods-MGCategories_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9B6C5721962ED32B62F5085F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,13 +358,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82F0B4FD207BB745002FA596 /* NSObject+MGCache.m in Sources */,
 				6003F59E195388D20070C39A /* MGAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MGViewController.m in Sources */,
-				82F0B4FE207BB745002FA596 /* UIView+MGView.m in Sources */,
-				82F0B4FA207BB745002FA596 /* NSDate+MGDate.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
-				82F0B4FC207BB745002FA596 /* NSString+MGString.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

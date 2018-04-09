@@ -11,6 +11,7 @@
 #endif
 
 #import "NSDate+MGDate.h"
+#import "NSString+MGString.h"
 #import "UIView+MGView.h"
 
 FOUNDATION_EXPORT double MGCategoriesVersionNumber;

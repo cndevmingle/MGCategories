@@ -7,8 +7,7 @@
 //
 
 #import "MGViewController.h"
-//#import <MGCategories/UIView+MGView.h>
-#import "UIView+MGView.h"
+#import <MGCategories/UIView+MGView.h>
 
 @interface MGViewController ()
 

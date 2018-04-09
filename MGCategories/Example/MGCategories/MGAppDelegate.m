@@ -7,8 +7,8 @@
 //
 
 #import "MGAppDelegate.h"
-#import "NSDate+MGDate.h"
-#import "NSString+MGString.h"
+#import <MGCategories/NSDate+MGDate.h>
+#import <MGCategories/NSString+MGString.h>
 
 @implementation MGAppDelegate
 
