@@ -355,4 +355,11 @@
     return NO;
 }
 
+- (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize {
+    CGSize size = [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : font} context:nil].size;
+    size.width = ceil(size.width);
+    size.height = ceil(size.height);
+    return size;
+}
+
 @end

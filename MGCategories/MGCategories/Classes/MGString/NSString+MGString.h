@@ -105,4 +105,13 @@
  */
 - (BOOL)isIPAddress;
 
+/**
+ 获取字符串大小
+
+ @param font 字体
+ @param maxSize 最大大小
+ @return 实际大小
+ */
+- (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
+
 @end
