@@ -6,6 +6,7 @@
 //
 
 #import "NSMutableAttributedString+MGString.h"
+#import <UIKit/UIKit.h>
 
 @implementation NSMutableAttributedString (MGString)
 

@@ -6,8 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
+@class UIFont, UIColor;
 @interface NSMutableAttributedString (MGString)
 
 /**

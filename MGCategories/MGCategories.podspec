@@ -42,7 +42,7 @@ TODO: 不定期添加一些常用Category，方便开发。
 
   s.subspec 'MGString' do |ss|
   	ss.source_files = 'MGCategories/MGCategories/Classes/MGString/**/*.{h,m}'
-  	ss.frameworks = 'Foundation'
+  	ss.frameworks = 'Foundation', 'UIKit'
   end
 
   # s.subspec 'MGCache' do |ss|

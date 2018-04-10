@@ -9,6 +9,7 @@
 #import "MGAppDelegate.h"
 #import <MGCategories/NSDate+MGDate.h>
 #import <MGCategories/NSString+MGString.h>
+#import <MGCategories/NSMutableAttributedString+MGString.h>
 
 @implementation MGAppDelegate
 
