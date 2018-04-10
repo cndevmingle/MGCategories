@@ -6,10 +6,11 @@
 //
 
 #import "NSString+MGString.h"
+#import "NSMutableAttributedString+MGString.h"
 
 @implementation NSString (MGString)
 
-+ (BOOL)isBlank:(NSString *)str {
++ (BOOL)mg_isBlank:(NSString *)str {
     if ([str isKindOfClass:[NSNull class]]) {
         return YES;
     }
@@ -20,7 +21,7 @@
 }
 
 #pragma mark - 正则相关
-- (BOOL)isValidateByRegex:(NSString *)regex{
+- (BOOL)mg_isValidateByRegex:(NSString *)regex{
     NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
     return [pre evaluateWithObject:self];
 }
@@ -28,7 +29,7 @@
 #pragma mark -
 
 //手机号分服务商
-- (BOOL)isMobileNumberClassification{
+- (BOOL)mg_isMobileNumberClassification{
     /**
      * 手机号码
      * 移动：134[0-8],135,136,137,138,139,150,151,157,158,159,182,187,188,1705
@@ -64,10 +65,10 @@
     
     //    NSPredicate *regextestmobile = [NSPredicate predicateWithFormat:@"SELF MATCHES %@", MOBILE];
     
-    if (([self isValidateByRegex:CM])
-        || ([self isValidateByRegex:CU])
-        || ([self isValidateByRegex:CT])
-        || ([self isValidateByRegex:PHS]))
+    if (([self mg_isValidateByRegex:CM])
+        || ([self mg_isValidateByRegex:CU])
+        || ([self mg_isValidateByRegex:CT])
+        || ([self mg_isValidateByRegex:PHS]))
     {
         return YES;
     }
@@ -78,7 +79,7 @@
 }
 
 //手机号有效性
-- (BOOL)isMobileNumber{
+- (BOOL)mg_isMobileNumber{
     /**
      *  手机号以13、15、18、170开头，8个 \d 数字字符
      *  小灵通 区号：010,020,021,022,023,024,025,027,028,029 还有未设置的新区号xxx
@@ -86,61 +87,61 @@
     NSString *mobileNoRegex = @"^1((3\\d|5[0-35-9]|8[025-9])\\d|70[059])\\d{7}$";//除4以外的所有个位整数，不能使用[^4,\\d]匹配，这里是否iOS Bug?
     NSString *phsRegex =@"^0(10|2[0-57-9]|\\d{3})\\d{7,8}$";
     
-    BOOL ret = [self isValidateByRegex:mobileNoRegex];
-    BOOL ret1 = [self isValidateByRegex:phsRegex];
+    BOOL ret = [self mg_isValidateByRegex:mobileNoRegex];
+    BOOL ret1 = [self mg_isValidateByRegex:phsRegex];
     
     return (ret || ret1);
 }
 
 //邮箱
-- (BOOL)isEmailAddress{
+- (BOOL)mg_isEmailAddress{
     NSString *emailRegex = @"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}";
-    return [self isValidateByRegex:emailRegex];
+    return [self mg_isValidateByRegex:emailRegex];
 }
 
 //身份证号
-- (BOOL)simpleVerifyIdentityCardNum
+- (BOOL)mg_simpleVerifyIdentityCardNum
 {
     NSString *regex2 = @"^(\\d{14}|\\d{17})(\\d|[xX])$";
-    return [self isValidateByRegex:regex2];
+    return [self mg_isValidateByRegex:regex2];
 }
 
 //车牌
-- (BOOL)isCarNumber{
+- (BOOL)mg_isCarNumber{
     //车牌号:湘K-DE829 香港车牌号码:粤Z-J499港
     NSString *carRegex = @"^[\u4e00-\u9fff]{1}[a-zA-Z]{1}[-][a-zA-Z_0-9]{4}[a-zA-Z_0-9_\u4e00-\u9fff]$";//其中\u4e00-\u9fa5表示unicode编码中汉字已编码部分，\u9fa5-\u9fff是保留部分，将来可能会添加
-    return [self isValidateByRegex:carRegex];
+    return [self mg_isValidateByRegex:carRegex];
 }
 
-- (BOOL)isMacAddress{
+- (BOOL)mg_isMacAddress{
     NSString * macAddRegex = @"([A-Fa-f\\d]{2}:){5}[A-Fa-f\\d]{2}";
-    return  [self isValidateByRegex:macAddRegex];
+    return  [self mg_isValidateByRegex:macAddRegex];
 }
 
-- (BOOL)isValidUrl
+- (BOOL)mg_isValidUrl
 {
     NSString *regex = @"^((http)|(https))+:[^\\s]+\\.[^\\s]*$";
-    return [self isValidateByRegex:regex];
+    return [self mg_isValidateByRegex:regex];
 }
 
-- (BOOL)isValidChinese;
+- (BOOL)mg_isValidChinese;
 {
     NSString *chineseRegex = @"^[\u4e00-\u9fa5]+$";
-    return [self isValidateByRegex:chineseRegex];
+    return [self mg_isValidateByRegex:chineseRegex];
 }
 
-- (BOOL)isValidPostalcode {
+- (BOOL)mg_isValidPostalcode {
     NSString *postalRegex = @"^[0-8]\\d{5}(?!\\d)$";
-    return [self isValidateByRegex:postalRegex];
+    return [self mg_isValidateByRegex:postalRegex];
 }
 
-- (BOOL)isValidTaxNo
+- (BOOL)mg_isValidTaxNo
 {
     NSString *taxNoRegex = @"[0-9]\\d{13}([0-9]|X)$";
-    return [self isValidateByRegex:taxNoRegex];
+    return [self mg_isValidateByRegex:taxNoRegex];
 }
 
-- (BOOL)isValidWithMinLenth:(NSInteger)minLenth
+- (BOOL)mg_isValidWithMinLenth:(NSInteger)minLenth
                    maxLenth:(NSInteger)maxLenth
              containChinese:(BOOL)containChinese
         firstCannotBeDigtal:(BOOL)firstCannotBeDigtal
@@ -150,10 +151,10 @@
     NSString *first = firstCannotBeDigtal ? @"^[a-zA-Z_]" : @"";
     
     NSString *regex = [NSString stringWithFormat:@"%@[%@A-Za-z0-9_]{%d,%d}", first, hanzi, (int)(minLenth-1), (int)(maxLenth-1)];
-    return [self isValidateByRegex:regex];
+    return [self mg_isValidateByRegex:regex];
 }
 
-- (BOOL)isValidWithMinLenth:(NSInteger)minLenth
+- (BOOL)mg_isValidWithMinLenth:(NSInteger)minLenth
                    maxLenth:(NSInteger)maxLenth
              containChinese:(BOOL)containChinese
               containDigtal:(BOOL)containDigtal
@@ -168,12 +169,12 @@
     NSString *letterRegex = containLetter ? @"(?=(.*[a-zA-Z].*){1})" : @"";
     NSString *characterRegex = [NSString stringWithFormat:@"(?:%@[%@A-Za-z0-9%@]+)", first, hanzi, containOtherCharacter ? containOtherCharacter : @""];
     NSString *regex = [NSString stringWithFormat:@"%@%@%@%@", lengthRegex, digtalRegex, letterRegex, characterRegex];
-    return [self isValidateByRegex:regex];
+    return [self mg_isValidateByRegex:regex];
 }
 
 #pragma mark - 算法相关
 //精确的身份证号码有效性检测
-+ (BOOL)accurateVerifyIDCardNumber:(NSString *)value {
++ (BOOL)mg_accurateVerifyIDCardNumber:(NSString *)value {
     value = [value stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
     
     int length =0;
@@ -276,7 +277,7 @@
  *  2，将奇位乘积的个十位全部相加，再加上所有偶数位上的数字
  *  3，将加法和加上校验位能被 10 整除。
  */
-- (BOOL)bankCardluhmCheck{
+- (BOOL)mg_bankCardluhmCheck{
     NSString * lastNum = [[self substringFromIndex:(self.length-1)] copy];//取出最后一位
     NSString * forwardNum = [[self substringToIndex:(self.length -1)] copy];//前15或18位
     
@@ -333,7 +334,7 @@
     return (luhmTotal%10 ==0)?YES:NO;
 }
 
-- (BOOL)isIPAddress{
+- (BOOL)mg_isIPAddress{
     NSString *regex = [NSString stringWithFormat:@"^(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})\\.(\\d{1,3})$"];
     NSPredicate *pre = [NSPredicate predicateWithFormat:@"SELF MATCHES %@",regex];
     BOOL rc = [pre evaluateWithObject:self];
@@ -355,7 +356,7 @@
     return NO;
 }
 
-- (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize {
+- (CGSize)mg_sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize {
     CGSize size = [self boundingRectWithSize:maxSize options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName : font} context:nil].size;
     size.width = ceil(size.width);
     size.height = ceil(size.height);

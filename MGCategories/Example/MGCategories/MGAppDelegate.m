@@ -17,15 +17,15 @@
     // Override point for customization after application launch.
 //    NSLog(@"%@", [[NSDate date] mg_stringWithFormat:@"yyyy-MM-dd HH:mm:ss w"]);
     NSString *str = [NSNull null];
-    NSLog(@"%@", [NSString isBlank:str]?@"空":@"非空");
+    NSLog(@"%@", [NSString mg_isBlank:str]?@"空":@"非空");
     str = @"ggydm@vip.qq.com";
-    NSLog(@"%@邮箱", [str isEmailAddress]?@"是":@"不是");
+    NSLog(@"%@邮箱", [str mg_isEmailAddress]?@"是":@"不是");
     str = @"18608170501";
-    NSLog(@"%@手机", [str isMobileNumber]?@"是":@"不是");
+    NSLog(@"%@手机", [str mg_isMobileNumber]?@"是":@"不是");
     str = @"08178212694";
-    NSLog(@"%@座机", [str isMobileNumberClassification]?@"是":@"不是");
+    NSLog(@"%@座机", [str mg_isMobileNumberClassification]?@"是":@"不是");
     str = @"51132219951110101x";
-    NSLog(@"%@身份证号", [NSString accurateVerifyIDCardNumber:str]?@"是":@"不是");
+    NSLog(@"%@身份证号", [NSString mg_accurateVerifyIDCardNumber:str]?@"是":@"不是");
     return YES;
 }
 

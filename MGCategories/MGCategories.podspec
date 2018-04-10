@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MGCategories'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = '常用类的Category.'
 
 # This description is used to generate tags and improve search results.
@@ -42,6 +42,7 @@ TODO: 不定期添加一些常用Category，方便开发。
 
   s.subspec 'MGString' do |ss|
   	ss.source_files = 'MGCategories/MGCategories/Classes/MGString/**/*.{h,m}'
+  	ss.frameworks = 'Foundation'
   end
 
   # s.subspec 'MGCache' do |ss|

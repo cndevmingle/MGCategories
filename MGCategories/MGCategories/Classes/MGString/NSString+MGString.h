@@ -15,61 +15,61 @@
  @param str 对象
  @return 是否为空
  */
-+ (BOOL)isBlank:(NSString *)str;
++ (BOOL)mg_isBlank:(NSString *)str;
 
 /**
  手机号分服务商验证
 
  @return 验证电话号码
  */
-- (BOOL)isMobileNumberClassification;
+- (BOOL)mg_isMobileNumberClassification;
 
 /**
  手机号有效性
  */
-- (BOOL)isMobileNumber;
+- (BOOL)mg_isMobileNumber;
 
 /**
  邮箱
  */
-- (BOOL)isEmailAddress;
+- (BOOL)mg_isEmailAddress;
 
 /**
  身份证号
  */
-- (BOOL)simpleVerifyIdentityCardNum;
+- (BOOL)mg_simpleVerifyIdentityCardNum;
 
 /**
  车牌验证
  */
-- (BOOL)isCarNumber;
+- (BOOL)mg_isCarNumber;
 
 /**
  mac地址验证
  */
-- (BOOL)isMacAddress;
+- (BOOL)mg_isMacAddress;
 
 /**
  URL地址验证
  */
-- (BOOL)isValidUrl;
+- (BOOL)mg_isValidUrl;
 
 /**
  验证是否是中文
  */
-- (BOOL)isValidChinese;
+- (BOOL)mg_isValidChinese;
 
 /**
  邮编验证
  */
-- (BOOL)isValidPostalcode;
+- (BOOL)mg_isValidPostalcode;
 
-- (BOOL)isValidTaxNo;
+- (BOOL)mg_isValidTaxNo;
 
 /**
  字符串验证
  */
-- (BOOL)isValidWithMinLenth:(NSInteger)minLenth
+- (BOOL)mg_isValidWithMinLenth:(NSInteger)minLenth
                    maxLenth:(NSInteger)maxLenth
              containChinese:(BOOL)containChinese
         firstCannotBeDigtal:(BOOL)firstCannotBeDigtal;
@@ -77,7 +77,7 @@
 /**
  字符串验证
  */
-- (BOOL)isValidWithMinLenth:(NSInteger)minLenth
+- (BOOL)mg_isValidWithMinLenth:(NSInteger)minLenth
                    maxLenth:(NSInteger)maxLenth
              containChinese:(BOOL)containChinese
               containDigtal:(BOOL)containDigtal
@@ -88,7 +88,7 @@
 /**
  精确的身份证号码有效性检测
  */
-+ (BOOL)accurateVerifyIDCardNumber:(NSString *)value;
++ (BOOL)mg_accurateVerifyIDCardNumber:(NSString *)value;
 
 /** 银行卡号有效性问题Luhn算法
  *  现行 16 位银联卡现行卡号开头 6 位是 622126～622925 之间的，7 到 15 位是银行自定义的，
@@ -98,12 +98,12 @@
  *  2，将奇位乘积的个十位全部相加，再加上所有偶数位上的数字
  *  3，将加法和加上校验位能被 10 整除。
  */
-- (BOOL)bankCardluhmCheck;
+- (BOOL)mg_bankCardluhmCheck;
 
 /**
  ip验证
  */
-- (BOOL)isIPAddress;
+- (BOOL)mg_isIPAddress;
 
 /**
  获取字符串大小
@@ -112,6 +112,6 @@
  @param maxSize 最大大小
  @return 实际大小
  */
-- (CGSize)sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
+- (CGSize)mg_sizeWithFont:(UIFont *)font maxSize:(CGSize)maxSize;
 
 @end
