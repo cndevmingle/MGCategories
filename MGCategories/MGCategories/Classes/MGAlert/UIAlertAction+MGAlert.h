@@ -7,11 +7,11 @@
 
 #import <UIKit/UIKit.h>
 
-typedef NSString const* MGAlertActionStyle;
+typedef NSString * MGAlertActionStyle;
 
-UIKIT_EXTERN MGAlertActionStyle kMGAlertActionStyleDefault;
-UIKIT_EXTERN MGAlertActionStyle kMGAlertActionStyleCancel;
-UIKIT_EXTERN MGAlertActionStyle kMGAlertActionStyleDestructive;
+UIKIT_EXTERN MGAlertActionStyle const kMGAlertActionStyleDefault;
+UIKIT_EXTERN MGAlertActionStyle const kMGAlertActionStyleCancel;
+UIKIT_EXTERN MGAlertActionStyle const kMGAlertActionStyleDestructive;
 
 
 @interface UIAlertAction (MGAlert)

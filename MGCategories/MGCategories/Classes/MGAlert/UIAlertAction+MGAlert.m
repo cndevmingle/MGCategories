@@ -7,9 +7,9 @@
 
 #import "UIAlertAction+MGAlert.h"
 
-MGAlertActionStyle kMGAlertActionStyleDefault     = @"kMGAlertActionStyleDefault";
-MGAlertActionStyle kMGAlertActionStyleCancel      = @"kMGAlertActionStyleCancel";
-MGAlertActionStyle kMGAlertActionStyleDestructive = @"kMGAlertActionStyleDestructive";
+MGAlertActionStyle const kMGAlertActionStyleDefault     = @"kMGAlertActionStyleDefault";
+MGAlertActionStyle const kMGAlertActionStyleCancel      = @"kMGAlertActionStyleCancel";
+MGAlertActionStyle const kMGAlertActionStyleDestructive = @"kMGAlertActionStyleDestructive";
 
 @implementation UIAlertAction (MGAlert)
 
