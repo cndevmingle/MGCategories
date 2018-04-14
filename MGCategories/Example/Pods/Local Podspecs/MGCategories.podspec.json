@@ -1,6 +1,6 @@
 {
   "name": "MGCategories",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "summary": "常用类的Category.",
   "description": "TODO: 不定期添加一些常用Category，方便开发。",
   "homepage": "https://github.com/cndevmingle/MGCategories",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/cndevmingle/MGCategories.git",
-    "tag": "0.0.4"
+    "tag": "0.0.5"
   },
   "platforms": {
     "ios": "8.0"
@@ -32,7 +32,15 @@
     {
       "name": "MGString",
       "source_files": "MGCategories/Classes/MGString/**/*.{h,m}",
-      "frameworks": "Foundation"
+      "frameworks": [
+        "Foundation",
+        "UIKit"
+      ]
+    },
+    {
+      "name": "MGAlert",
+      "source_files": "MGCategories/Classes/MGAlert/**/*.{h,m}",
+      "frameworks": "UIKit"
     }
   ]
 }

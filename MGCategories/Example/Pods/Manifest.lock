@@ -1,11 +1,13 @@
 PODS:
-  - MGCategories (0.0.4):
-    - MGCategories/MGDate (= 0.0.4)
-    - MGCategories/MGString (= 0.0.4)
-    - MGCategories/MGView (= 0.0.4)
-  - MGCategories/MGDate (0.0.4)
-  - MGCategories/MGString (0.0.4)
-  - MGCategories/MGView (0.0.4)
+  - MGCategories (0.0.5):
+    - MGCategories/MGAlert (= 0.0.5)
+    - MGCategories/MGDate (= 0.0.5)
+    - MGCategories/MGString (= 0.0.5)
+    - MGCategories/MGView (= 0.0.5)
+  - MGCategories/MGAlert (0.0.5)
+  - MGCategories/MGDate (0.0.5)
+  - MGCategories/MGString (0.0.5)
+  - MGCategories/MGView (0.0.5)
 
 DEPENDENCIES:
   - MGCategories (from `../`)
@@ -15,7 +17,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MGCategories: d807f6a76d69ec63e088f168b9a2ca0d3fe2d543
+  MGCategories: d35648a383259b7b7e8503bbc10f9f7f38020161
 
 PODFILE CHECKSUM: 2cc36ef2ff400fe15a1ec0ad56448c5d2a86da60
 

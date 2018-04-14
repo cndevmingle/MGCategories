@@ -8,6 +8,7 @@
 
 #import "MGViewController.h"
 #import <MGCategories/UIView+MGView.h>
+#import <MGCategories/UIAlertAction+MGAlert.h>
 
 @interface MGViewController ()
 
@@ -20,6 +21,24 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+//    [UIAlertAction mg_showAlertFromTarget:self title:@"-title" message:@"message-" buttonTitles:@[@"b0", @"b1", @"b2"] callback:^(NSString *selected) {
+//        NSLog(@"%@", selected);
+//    }];
+    
+//    [UIAlertAction mg_showActionSheetFromTarget:self title:@"-title" message:@"message-" buttonTitles:@[@"b0", @"b1", @"b2"] callback:^(NSString *selected) {
+//        NSLog(@"%@", selected);
+//    }];
+    
+//    [UIAlertAction mg_showAlertFromTarget:self title:@"-title" message:@"message-" buttons:@[@{@"普通按钮":kMGAlertActionStyleDefault,}, @{@"销毁按钮":kMGAlertActionStyleDestructive}, @{@"取消按钮":kMGAlertActionStyleCancel}, @{@"普通按钮":kMGAlertActionStyleDefault,}, @{@"销毁按钮":kMGAlertActionStyleDestructive}] callback:^(NSString *selected) {
+//        NSLog(@"%@", selected);
+//    }];
+    
+    [UIAlertAction mg_showActionSheetFromTarget:self title:@"-title" message:@"message-" buttons:@[@{@"普通按钮":kMGAlertActionStyleDefault,}, @{@"销毁按钮":kMGAlertActionStyleDestructive}, @{@"取消按钮":kMGAlertActionStyleCancel}, @{@"普通按钮":kMGAlertActionStyleDefault,}, @{@"销毁按钮":kMGAlertActionStyleDestructive}] callback:^(NSString *selected) {
+        NSLog(@"%@", selected);
+    }];
 }
 
 - (void)gestureTestCase {
