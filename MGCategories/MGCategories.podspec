@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MGCategories'
-  s.version          = '0.0.6'
+  s.version          = '0.0.5'
   s.summary          = '常用类的Category.'
 
 # This description is used to generate tags and improve search results.
@@ -50,9 +50,10 @@ TODO: 不定期添加一些常用Category，方便开发。
   	ss.frameworks = 'UIKit'
   end
 
-  # s.subspec 'MGCache' do |ss|
-  # 	ss.source_files = 'MGCategories/Classes/MGCache/**/*.{h,m}'
-  # end
+  s.subspec 'MGCollectionView' do |ss|
+    ss.source_files = 'MGCategories/MGCategories/Classes/MGCollectionView/**/*.{h,m}'
+    ss.frameworks = 'UIKit'
+  end
   
   # s.resource_bundles = {
   #   'MGCategories' => ['MGCategories/Assets/*.png']

@@ -23,6 +23,9 @@
 		6003F5BC195388D20070C39A /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6003F5BB195388D20070C39A /* Tests.m */; };
 		690FA308E6642A35343760E8 /* Pods_MGCategories_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A555FE962685C66DC8302FDF /* Pods_MGCategories_Tests.framework */; };
 		71719F9F1E33DC2100824A3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */; };
+		829AA34A2084D6C1002ACE75 /* DragCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 829AA3442084D6C0002ACE75 /* DragCollectionViewCell.m */; };
+		829AA34B2084D6C1002ACE75 /* MGCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 829AA3462084D6C1002ACE75 /* MGCollectionViewController.m */; };
+		829AA34C2084D6C1002ACE75 /* MenuCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 829AA3472084D6C1002ACE75 /* MenuCollectionReusableView.m */; };
 		873B8AEB1B1F5CCA007FD442 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 873B8AEA1B1F5CCA007FD442 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +66,12 @@
 		71719F9E1E33DC2100824A3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		77925A073CCE193667F21809 /* Pods-MGCategories_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGCategories_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MGCategories_Example/Pods-MGCategories_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7BF408DB33AE73461FA55CA7 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		829AA3442084D6C0002ACE75 /* DragCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DragCollectionViewCell.m; sourceTree = "<group>"; };
+		829AA3452084D6C0002ACE75 /* MGCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MGCollectionViewController.h; sourceTree = "<group>"; };
+		829AA3462084D6C1002ACE75 /* MGCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MGCollectionViewController.m; sourceTree = "<group>"; };
+		829AA3472084D6C1002ACE75 /* MenuCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuCollectionReusableView.m; sourceTree = "<group>"; };
+		829AA3482084D6C1002ACE75 /* MenuCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuCollectionReusableView.h; sourceTree = "<group>"; };
+		829AA3492084D6C1002ACE75 /* DragCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DragCollectionViewCell.h; sourceTree = "<group>"; };
 		873B8AEA1B1F5CCA007FD442 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A555FE962685C66DC8302FDF /* Pods_MGCategories_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MGCategories_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E04A31507B89271C4C458DAD /* Pods-MGCategories_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MGCategories_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MGCategories_Tests/Pods-MGCategories_Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,9 +143,15 @@
 			children = (
 				6003F59C195388D20070C39A /* MGAppDelegate.h */,
 				6003F59D195388D20070C39A /* MGAppDelegate.m */,
-				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				6003F5A5195388D20070C39A /* MGViewController.h */,
 				6003F5A6195388D20070C39A /* MGViewController.m */,
+				829AA3492084D6C1002ACE75 /* DragCollectionViewCell.h */,
+				829AA3442084D6C0002ACE75 /* DragCollectionViewCell.m */,
+				829AA3482084D6C1002ACE75 /* MenuCollectionReusableView.h */,
+				829AA3472084D6C1002ACE75 /* MenuCollectionReusableView.m */,
+				829AA3452084D6C0002ACE75 /* MGCollectionViewController.h */,
+				829AA3462084D6C1002ACE75 /* MGCollectionViewController.m */,
+				873B8AEA1B1F5CCA007FD442 /* Main.storyboard */,
 				71719F9D1E33DC2100824A3D /* LaunchScreen.storyboard */,
 				6003F5A8195388D20070C39A /* Images.xcassets */,
 				6003F594195388D20070C39A /* Supporting Files */,
@@ -358,9 +373,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				829AA34A2084D6C1002ACE75 /* DragCollectionViewCell.m in Sources */,
 				6003F59E195388D20070C39A /* MGAppDelegate.m in Sources */,
 				6003F5A7195388D20070C39A /* MGViewController.m in Sources */,
 				6003F59A195388D20070C39A /* main.m in Sources */,
+				829AA34C2084D6C1002ACE75 /* MenuCollectionReusableView.m in Sources */,
+				829AA34B2084D6C1002ACE75 /* MGCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -41,6 +41,11 @@
       "name": "MGAlert",
       "source_files": "MGCategories/Classes/MGAlert/**/*.{h,m}",
       "frameworks": "UIKit"
+    },
+    {
+      "name": "MGCollectionView",
+      "source_files": "MGCategories/Classes/MGCollectionView/**/*.{h,m}",
+      "frameworks": "UIKit"
     }
   ]
 }

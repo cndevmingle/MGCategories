@@ -1,10 +1,12 @@
 PODS:
   - MGCategories (0.0.5):
     - MGCategories/MGAlert (= 0.0.5)
+    - MGCategories/MGCollectionView (= 0.0.5)
     - MGCategories/MGDate (= 0.0.5)
     - MGCategories/MGString (= 0.0.5)
     - MGCategories/MGView (= 0.0.5)
   - MGCategories/MGAlert (0.0.5)
+  - MGCategories/MGCollectionView (0.0.5)
   - MGCategories/MGDate (0.0.5)
   - MGCategories/MGString (0.0.5)
   - MGCategories/MGView (0.0.5)
@@ -17,7 +19,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MGCategories: d35648a383259b7b7e8503bbc10f9f7f38020161
+  MGCategories: 78c961f25a3bfd7cdbd05d42c32e3e53c24705a0
 
 PODFILE CHECKSUM: 2cc36ef2ff400fe15a1ec0ad56448c5d2a86da60
 

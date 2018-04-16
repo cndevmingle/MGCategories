@@ -11,6 +11,7 @@
 #endif
 
 #import "UIAlertAction+MGAlert.h"
+#import "UICollectionView+MGCollection.h"
 #import "NSDate+MGDate.h"
 #import "NSMutableAttributedString+MGString.h"
 #import "NSString+MGString.h"
