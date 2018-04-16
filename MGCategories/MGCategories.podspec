@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MGCategories'
-  s.version          = '0.0.6'
+  s.version          = '0.0.7'
   s.summary          = '常用类的Category.'
 
 # This description is used to generate tags and improve search results.
