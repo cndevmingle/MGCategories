@@ -35,9 +35,18 @@
     if (dragEnable && !self.longPressGesture) {
         self.longPressGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressHandle:)];
         self.longPressGesture.enabled = self.dragEnable;
+        self.scaleOnDrag = 1.2;
         [self addGestureRecognizer:self.longPressGesture];
     }
     self.longPressGesture.enabled = dragEnable;
+}
+
+- (float)scaleOnDrag {
+    return [objc_getAssociatedObject(self, @selector(scaleOnDrag)) floatValue];
+}
+
+- (void)setScaleOnDrag:(float)scaleOnDrag {
+    objc_setAssociatedObject(self, @selector(scaleOnDrag), @(scaleOnDrag), OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (BOOL)isDrag {
@@ -118,9 +127,8 @@
         self.dragView = [targetCell snapshotViewAfterScreenUpdates:NO];
         self.dragView.frame = targetCell.frame;
         [self addSubview:self.dragView];
-        __weak typeof(self) weakSelf = self;
         [UIView animateWithDuration:0.25f animations:^{
-            weakSelf.dragView.transform = CGAffineTransformMakeScale(1.2, 1.2);
+            self.dragView.transform = CGAffineTransformMakeScale(self.scaleOnDrag, self.scaleOnDrag);
         } completion:^(BOOL finished) {
             if (finished) {
                 targetCell.hidden = YES;
@@ -159,20 +167,19 @@
 #pragma mark - 拖动结束
 - (void)dragEnd:(CGPoint)touchPoint {
     if (self.dragView) {
-        __weak typeof(self) weakSelf = self;
         [UIView animateWithDuration:0.25f animations:^{
-            weakSelf.dragView.transform = CGAffineTransformMakeScale(1, 1);
-            weakSelf.dragView.frame = [weakSelf cellForItemAtIndexPath:weakSelf.currentIndexPath].frame;
+            self.dragView.transform = CGAffineTransformMakeScale(1, 1);
+            self.dragView.frame = [self cellForItemAtIndexPath:self.currentIndexPath].frame;
         } completion:^(BOOL finished) {
             if (finished) {
-                weakSelf.isDrag = NO;
-                [weakSelf cellForItemAtIndexPath:weakSelf.currentIndexPath].hidden = NO;
-                [weakSelf.dragView removeFromSuperview];
-                if ([weakSelf.mgDelegate respondsToSelector:@selector(mg_collectionView:didEndDragItemAtIndexPath:)]) {
-                    [weakSelf.mgDelegate mg_collectionView:weakSelf didEndDragItemAtIndexPath:weakSelf.currentIndexPath];
+                self.isDrag = NO;
+                [self cellForItemAtIndexPath:self.currentIndexPath].hidden = NO;
+                [self.dragView removeFromSuperview];
+                if ([self.mgDelegate respondsToSelector:@selector(mg_collectionView:didEndDragItemAtIndexPath:)]) {
+                    [self.mgDelegate mg_collectionView:self didEndDragItemAtIndexPath:self.currentIndexPath];
                 }
-                weakSelf.dragView = nil;
-                weakSelf.currentIndexPath = nil;
+                self.dragView = nil;
+                self.currentIndexPath = nil;
             }
         }];
     }

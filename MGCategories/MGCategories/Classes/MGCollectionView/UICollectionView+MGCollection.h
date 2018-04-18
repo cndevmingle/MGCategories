@@ -42,6 +42,8 @@
 
 /**允许拖动，默认是NO*/
 @property (nonatomic, assign) BOOL dragEnable;
+/**拖动时缩放比例，默认1.2*/
+@property (nonatomic, assign) float scaleOnDrag;
 /**是否正在拖动*/
 @property (nonatomic, assign, readonly) BOOL isDrag;
 /**代理*/
