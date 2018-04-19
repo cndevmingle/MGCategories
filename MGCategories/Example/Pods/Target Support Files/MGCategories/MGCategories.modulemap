@@ -1,6 +1,0 @@
-framework module MGCategories {
-  umbrella header "MGCategories-umbrella.h"
-
-  export *
-  module * { export * }
-}

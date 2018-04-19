@@ -1,17 +1,29 @@
 # MGCategories
-一些常用的gategory，方便开发，节约开发时间。
 
-## 使用
-CocoaPods搜索"MGCategories"
+[![CI Status](http://img.shields.io/travis/Mingle/MGCategories.svg?style=flat)](https://travis-ci.org/Mingle/MGCategories)
+[![Version](https://img.shields.io/cocoapods/v/MGCategories.svg?style=flat)](http://cocoapods.org/pods/MGCategories)
+[![License](https://img.shields.io/cocoapods/l/MGCategories.svg?style=flat)](http://cocoapods.org/pods/MGCategories)
+[![Platform](https://img.shields.io/cocoapods/p/MGCategories.svg?style=flat)](http://cocoapods.org/pods/MGCategories)
 
-## MGAlert
-提供了4个类方法，以便开发更高效的使用
+## Example
 
-## MGDate
-封装了常用的时间方法
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
-## MGString
-方便的设置可变的样式字符串，以及对字符串的各种验证
+## Requirements
 
-## MGView
-快捷的访问和设置frame中各个元素，以及对layer的访问
+## Installation
+
+MGCategories is available through [CocoaPods](http://cocoapods.org). To install
+it, simply add the following line to your Podfile:
+
+```ruby
+pod 'MGCategories'
+```
+
+## Author
+
+Mingle, cndevmingle@gmail.com
+
+## License
+
+MGCategories is available under the MIT license. See the LICENSE file for more info.
