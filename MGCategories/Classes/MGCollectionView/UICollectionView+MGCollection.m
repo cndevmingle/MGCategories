@@ -124,7 +124,7 @@
         if ([self.mgDelegate respondsToSelector:@selector(mg_collectionView:willBeginDragItemAtIndexPath:)]) {
             [self.mgDelegate mg_collectionView:self willBeginDragItemAtIndexPath:self.currentIndexPath];
         }
-        self.dragView = [targetCell snapshotViewAfterScreenUpdates:NO];
+        self.dragView = [targetCell snapshotViewAfterScreenUpdates:YES];
         self.dragView.frame = targetCell.frame;
         [self addSubview:self.dragView];
         [UIView animateWithDuration:0.25f animations:^{

@@ -1,26 +1,35 @@
 PODS:
-  - MGCategories (0.0.5):
-    - MGCategories/MGAlert (= 0.0.5)
-    - MGCategories/MGCollectionView (= 0.0.5)
-    - MGCategories/MGDate (= 0.0.5)
-    - MGCategories/MGString (= 0.0.5)
-    - MGCategories/MGView (= 0.0.5)
-  - MGCategories/MGAlert (0.0.5)
-  - MGCategories/MGCollectionView (0.0.5)
-  - MGCategories/MGDate (0.0.5)
-  - MGCategories/MGString (0.0.5)
-  - MGCategories/MGView (0.0.5)
+  - MBProgressHUD (1.0.0)
+  - MGCategories (0.1.0):
+    - MGCategories/MGAlert (= 0.1.0)
+    - MGCategories/MGCollectionView (= 0.1.0)
+    - MGCategories/MGDate (= 0.1.0)
+    - MGCategories/MGHUD (= 0.1.0)
+    - MGCategories/MGString (= 0.1.0)
+    - MGCategories/MGView (= 0.1.0)
+  - MGCategories/MGAlert (0.1.0)
+  - MGCategories/MGCollectionView (0.1.0)
+  - MGCategories/MGDate (0.1.0)
+  - MGCategories/MGHUD (0.1.0):
+    - MBProgressHUD (~> 1.0.0)
+  - MGCategories/MGString (0.1.0)
+  - MGCategories/MGView (0.1.0)
 
 DEPENDENCIES:
   - MGCategories (from `../`)
+
+SPEC REPOS:
+  https://github.com/CocoaPods/Specs.git:
+    - MBProgressHUD
 
 EXTERNAL SOURCES:
   MGCategories:
     :path: "../"
 
 SPEC CHECKSUMS:
-  MGCategories: 78c961f25a3bfd7cdbd05d42c32e3e53c24705a0
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MGCategories: 4b2e448c54b99b50bf5fb97f6c5d3fd3fa64de14
 
 PODFILE CHECKSUM: 2cc36ef2ff400fe15a1ec0ad56448c5d2a86da60
 
-COCOAPODS: 1.5.0.beta.1
+COCOAPODS: 1.5.0

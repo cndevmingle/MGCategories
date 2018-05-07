@@ -1,5 +1,5 @@
 //
-//  UIAlertAction+MGAlert.h
+//  UIAlertController+MGAlert.h
 //  MGCategories
 //
 //  Created by Mingle on 2018/4/14.
@@ -14,7 +14,7 @@ UIKIT_EXTERN MGAlertActionStyle const kMGAlertActionStyleCancel;
 UIKIT_EXTERN MGAlertActionStyle const kMGAlertActionStyleDestructive;
 
 
-@interface UIAlertAction (MGAlert)
+@interface UIAlertController (MGAlert)
 
 /**
  显示aler

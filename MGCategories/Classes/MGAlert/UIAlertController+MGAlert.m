@@ -1,17 +1,17 @@
 //
-//  UIAlertAction+MGAlert.m
+//  UIAlertController+MGAlert.m
 //  MGCategories
 //
 //  Created by Mingle on 2018/4/14.
 //
 
-#import "UIAlertAction+MGAlert.h"
+#import "UIAlertController+MGAlert.h"
 
 MGAlertActionStyle const kMGAlertActionStyleDefault     = @"kMGAlertActionStyleDefault";
 MGAlertActionStyle const kMGAlertActionStyleCancel      = @"kMGAlertActionStyleCancel";
 MGAlertActionStyle const kMGAlertActionStyleDestructive = @"kMGAlertActionStyleDestructive";
 
-@implementation UIAlertAction (MGAlert)
+@implementation UIAlertController (MGAlert)
 
 + (void)mg_showAlertFromTarget:(UIViewController *)target
                          title:(NSString *)title
